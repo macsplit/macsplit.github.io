@@ -1,0 +1,6 @@
+[submodule "markdown-table-generator"]
+	path = markdown-table-generator
+	url = https://github.com/macsplit/markdown-table-generator.git
+[submodule "text-viewer"]
+	path = text-viewer
+	url = https://github.com/macsplit/text-viewer.git
