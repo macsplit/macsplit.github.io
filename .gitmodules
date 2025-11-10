@@ -4,3 +4,6 @@
 [submodule "text-viewer"]
 	path = text-viewer
 	url = https://github.com/macsplit/text-viewer.git
+[submodule "tabled"]
+	path = tabled
+	url = git@github.com:macsplit/tabled.git
