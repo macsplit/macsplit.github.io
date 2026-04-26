@@ -1,0 +1,8 @@
+{
+  "executablePath": "/usr/bin/chromium-browser",
+  "args": [
+    "--allow-file-access-from-files",
+    "--disable-web-security",
+    "--no-sandbox"
+  ]
+}

@@ -1,0 +1,10 @@
+graph LR
+    A[Monthly uploads or API feeds] --> B[Ingestion pipeline]
+    B --> C[Daily time-series store]
+    C --> D[Model workbench]
+    C --> E[Fault detection engine]
+    D --> E
+    E --> F[Cooperative dashboard]
+    E --> G[Health reports]
+    E --> H[Validation feedback]
+    H --> D

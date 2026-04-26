@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface Architecture Diagram</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f5efe4;
+      font-family: Arial, sans-serif;
+    }
+
+    .frame {
+      width: 1600px;
+      min-height: 900px;
+      padding: 48px;
+      box-sizing: border-box;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(110, 156, 102, 0.18), transparent 26%),
+        linear-gradient(180deg, #faf6ed, #efe5d1);
+    }
+
+    .diagram-card {
+      width: 100%;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255, 251, 244, 0.96);
+      box-shadow: 0 24px 80px rgba(70, 48, 15, 0.12);
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 34px;
+      color: #2c2f25;
+    }
+
+    #diagram {
+      display: grid;
+      place-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="diagram-card">
+      <h1>SolarSense Interface Architecture</h1>
+      <div id="diagram"></div>
+    </div>
+  </div>
+  <script src="./mermaid.min.js"></script>
+  <script>
+    const definition = `graph LR
+      A[Monthly uploads or API feeds] --> B[Ingestion pipeline]
+      B --> C[Daily time-series store]
+      C --> D[Model workbench]
+      C --> E[Fault detection engine]
+      D --> E
+      E --> F[Cooperative dashboard]
+      E --> G[Health reports]
+      E --> H[Validation feedback]
+      H --> D`;
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      themeVariables: {
+        primaryColor: "#dceccd",
+        primaryTextColor: "#2c2f25",
+        primaryBorderColor: "#467056",
+        lineColor: "#6f5b3d",
+        secondaryColor: "#f9efdd",
+        tertiaryColor: "#f8d79a",
+        fontFamily: "Arial, sans-serif"
+      }
+    });
+
+    mermaid.render("interface-architecture-svg", definition).then(({ svg }) => {
+      document.getElementById("diagram").innerHTML = svg;
+      document.title = "rendered";
+    });
+  </script>
+</body>
+</html>
