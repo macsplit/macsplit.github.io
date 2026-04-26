@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSense Analytics Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">SS</span>
+          <div>
+            <p class="eyebrow">Static product mockup</p>
+            <h1>SolarSense Analytics</h1>
+          </div>
+        </div>
+        <div class="topbar-meta">
+          <span>Daily aggregate diagnostics</span>
+          <span>Small solar cooperatives</span>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy card">
+          <p class="section-tag">Proposal summary</p>
+          <h2>Turn monthly spreadsheet uploads into clear fault detection and long-term health reporting.</h2>
+          <p>
+            This mockup demonstrates a product that compares actual daily array output against modeled clear-sky and weather-adjusted expectations,
+            then flags likely faults, degradation, and validation needs with confidence scoring.
+          </p>
+          <div class="hero-actions">
+            <a href="#dashboard" class="button primary">View dashboard</a>
+            <a href="#workbench" class="button secondary">Open model workbench</a>
+          </div>
+          <ul class="stat-strip">
+            <li>
+              <strong>30 years</strong>
+              <span>climate simulation support</span>
+            </li>
+            <li>
+              <strong>Daily data</strong>
+              <span>no hourly meter requirement</span>
+            </li>
+            <li>
+              <strong>Monthly upload</strong>
+              <span>xlsx or API ingestion</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel card">
+          <p class="section-tag">Live prototype snapshot</p>
+          <div class="alert-list">
+            <article class="alert critical">
+              <span class="alert-label">Fault candidate</span>
+              <h3>Array 4 / String B</h3>
+              <p>15.2% under expected yield for 6 consecutive days.</p>
+              <span class="alert-meta">Confidence 0.88 · inspect connector or inverter chain</span>
+            </article>
+            <article class="alert warning">
+              <span class="alert-label">Drift</span>
+              <h3>Community Hall Roof</h3>
+              <p>Slow degradation trend visible over the last 11 months.</p>
+              <span class="alert-meta">Confidence 0.73 · compare with maintenance records</span>
+            </article>
+            <article class="alert ok">
+              <span class="alert-label">Healthy</span>
+              <h3>Library Annex</h3>
+              <p>Output tracking modeled weather-adjusted baseline within tolerance.</p>
+              <span class="alert-meta">Variance 2.1% · normal operating band</span>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="dashboard">
+        <div class="section-heading">
+          <p class="section-tag">End-user interface</p>
+          <h2>Cooperative dashboard</h2>
+          <p>Non-technical stakeholders get a compact status view, upload flow, and trend summaries.</p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="card map-card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Fleet overview</p>
+                <h3>Arrays by site</h3>
+              </div>
+              <span class="chip">12 active arrays</span>
+            </div>
+            <div class="site-map">
+              <button class="map-node ok" data-site="Library Annex">Library Annex</button>
+              <button class="map-node warning" data-site="Community Hall Roof">Community Hall</button>
+              <button class="map-node critical" data-site="Array 4 / String B">Array 4</button>
+              <button class="map-node ok" data-site="Depot Canopy">Depot Canopy</button>
+            </div>
+            <p class="card-note" id="site-description">Select a site marker to inspect the mock status detail.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Upload center</p>
+                <h3>Monthly data intake</h3>
+              </div>
+              <span class="chip">xlsx or API</span>
+            </div>
+            <div class="upload-dropzone" id="upload-dropzone">
+              <p>Drop `.xlsx` export here</p>
+              <span>Expected sheets: sun strength, cloud attenuation, daily output</span>
+            </div>
+            <ul class="checklist">
+              <li>Validate per-day readings and meter coverage</li>
+              <li>Attach array specifications and location context</li>
+              <li>Queue model run and report generation</li>
+            </ul>
+          </article>
+
+          <article class="card trend-card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Degradation tracker</p>
+                <h3>Yield efficiency over time</h3>
+              </div>
+              <span class="chip">Last 12 months</span>
+            </div>
+            <div class="trend-plot" aria-label="Mock degradation chart">
+              <span class="trend-line expected"></span>
+              <span class="trend-line actual"></span>
+              <div class="trend-bars">
+                <span style="--bar: 72%"></span>
+                <span style="--bar: 69%"></span>
+                <span style="--bar: 71%"></span>
+                <span style="--bar: 66%"></span>
+                <span style="--bar: 68%"></span>
+                <span style="--bar: 65%"></span>
+                <span style="--bar: 63%"></span>
+                <span style="--bar: 64%"></span>
+                <span style="--bar: 61%"></span>
+                <span style="--bar: 59%"></span>
+                <span style="--bar: 58%"></span>
+                <span style="--bar: 56%"></span>
+              </div>
+            </div>
+            <p class="card-note">Expected baseline remains weather-adjusted; actual trend shows a downward drift worth inspection.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="workbench">
+        <div class="section-heading">
+          <p class="section-tag">Developer interface</p>
+          <h2>Model workbench</h2>
+          <p>Analysts tune assumptions, compare expected versus actual yield, and calibrate fault confidence.</p>
+        </div>
+
+        <div class="workbench-grid">
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Array parameters</p>
+                <h3>Physical specification inputs</h3>
+              </div>
+              <span class="chip">Editable mock controls</span>
+            </div>
+            <form class="form-grid">
+              <label>
+                <span>Azimuth</span>
+                <input type="range" min="90" max="270" value="182">
+              </label>
+              <label>
+                <span>Tilt angle</span>
+                <input type="range" min="0" max="60" value="27">
+              </label>
+              <label>
+                <span>Panel efficiency</span>
+                <input type="range" min="10" max="28" value="22">
+              </label>
+              <label>
+                <span>Inverter loss factor</span>
+                <input type="range" min="0" max="20" value="6">
+              </label>
+            </form>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Model tuning</p>
+                <h3>Weather and attenuation sensitivity</h3>
+              </div>
+              <span class="chip">Statistical controls</span>
+            </div>
+            <div class="tuning-list">
+              <div>
+                <span>Cloud attenuation coefficient</span>
+                <strong>0.82</strong>
+              </div>
+              <div>
+                <span>Clear sky fallback weight</span>
+                <strong>0.58</strong>
+              </div>
+              <div>
+                <span>Minimum anomaly run length</span>
+                <strong>5 days</strong>
+              </div>
+              <div>
+                <span>Fault confidence threshold</span>
+                <strong>0.75</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="card validation-card">
+            <div class="card-header">
+              <div>
+                <p class="section-tag">Validation dashboard</p>
+                <h3>Expected vs actual daily output</h3>
+              </div>
+              <span class="chip">Array 4 selected</span>
+            </div>
+            <div class="compare-chart" aria-label="Mock comparison chart">
+              <div class="chart-series expected">
+                <span style="--value: 68%"></span>
+                <span style="--value: 70%"></span>
+                <span style="--value: 73%"></span>
+                <span style="--value: 69%"></span>
+                <span style="--value: 72%"></span>
+                <span style="--value: 74%"></span>
+              </div>
+              <div class="chart-series actual">
+                <span style="--value: 63%"></span>
+                <span style="--value: 60%"></span>
+                <span style="--value: 58%"></span>
+                <span style="--value: 57%"></span>
+                <span style="--value: 55%"></span>
+                <span style="--value: 54%"></span>
+              </div>
+            </div>
+            <p class="card-note">Sustained gap with similar weather context suggests a likely hardware-side issue rather than transient shading.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-tag">Operational logic</p>
+          <h2>How the proposal works</h2>
+        </div>
+        <div class="flow-grid">
+          <article class="card flow-card">
+            <h3>Inputs</h3>
+            <ul class="checklist">
+              <li>Spreadsheet upload with solar strength, cloud attenuation, and daily output</li>
+              <li>Array metadata such as angle, capacity, efficiency, and location</li>
+              <li>Optional API connection for future automated collection</li>
+            </ul>
+          </article>
+          <article class="card flow-card">
+            <h3>Processing</h3>
+            <ul class="checklist">
+              <li>Normalize daily data across multiple related arrays</li>
+              <li>Model expected yield using clear-sky and satellite-informed context</li>
+              <li>Detect sustained deviations and classify probable fault types</li>
+            </ul>
+          </article>
+          <article class="card flow-card">
+            <h3>Outputs</h3>
+            <ul class="checklist">
+              <li>Fault type, affected array, date window, and confidence score</li>
+              <li>Health report summarizing degradation, warnings, and validation needs</li>
+              <li>Plain language guidance for manual technical follow-up</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
