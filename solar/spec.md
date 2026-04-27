@@ -66,4 +66,4 @@ Designed for non-technical stakeholders to quickly assess site health.
 ---
 
 ### Follow-up
-Would you like me to elaborate on the specific statistical methods (e.g., Z-score analysis or regression modeling) that would be most effective for detecting string-level faults using only daily aggregate data?
+May elaborate on the specific statistical methods (e.g., Z-score analysis or regression modeling) that would be most effective for detecting string-level faults using only daily aggregate data?
